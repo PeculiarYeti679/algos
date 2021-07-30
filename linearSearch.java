@@ -7,7 +7,8 @@ public class linearSearch {
         int value = 0;
         for(int i=0; i<randNums.length; i++){
             if(randNums[i] == key) {
-                value = i;}
+                value = i;
+            break;}
             else{
                 value = -1;
             }
@@ -19,8 +20,9 @@ public class linearSearch {
     public static int[] genRandObj(int[] randNums){
         Random objGenerator = new Random();
         for(int i = 0; i < randNums.length; i++){
-            randNums[i] = objGenerator.nextInt(1000);
+            randNums[i] = objGenerator.nextInt(100000000);
         }
+        Arrays.sort(randNums);
         System.out.println(Arrays.toString(randNums));
         return randNums;
     }
@@ -34,7 +36,7 @@ public class linearSearch {
     }
     public static void main(String[] args) {
 
-        int[] randNums = new int[10];
+        int[] randNums = new int[1000000];
         
 
         randNums = genRandObj(randNums);
